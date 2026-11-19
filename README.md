@@ -1,3 +1,3 @@
 # object-ctor.ts
 
-Enhanced type definitions for Object constructor.
+Enhanced type definitions for `Object` constructor.
