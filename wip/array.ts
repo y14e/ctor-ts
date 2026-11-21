@@ -4,16 +4,11 @@ interface ArrayCtor extends ArrayConstructor {
     ..._: unknown extends T
       ? never
       : T extends T
-        ? T extends readonly unknown[]
+        ? T extends ReadonlyArray<unknown>
           ? []
           : never
         : never
-  ): arg is Extract<T, readonly unknown[]>;
-  isArray(arg: unknown): arg is unknown[];
-}
-
-interface ArrayCtor extends ArrayConstructor {
-  isArray<T>(arg: T): arg is Extract<T, readonly unknown[]>;
+  ): arg is Extract<T, ReadonlyArray<unknown>>;
   isArray(arg: unknown): arg is unknown[];
 }
 
